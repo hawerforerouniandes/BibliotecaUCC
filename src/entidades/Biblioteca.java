@@ -27,8 +27,16 @@ public class Biblioteca {
 		this.estudiantes.add(estudiante);
 	}
 	
+	public ArrayList<Estudiante> consultarEstudiantes(){
+		return this.estudiantes;
+	}
+	
 	public void registrarPrestamo(Prestamo prestamo){
 		this.prestamos.add(prestamo);
+	}
+	
+	public ArrayList<Prestamo> consultarPrestamos(){
+		return this.prestamos;
 	}
 
 	

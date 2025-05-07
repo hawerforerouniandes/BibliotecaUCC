@@ -21,5 +21,11 @@ public class Libro {
 		return "Libro [id=" + id + ", titulo=" + titulo + ", isbn=" + isbn + ", categoria=" + categoria + ", autor="
 				+ autor + "]";
 	}
+
+
+	public String getTitulo() {
+		return titulo;
+	}
+	
 	
 }
