@@ -12,7 +12,7 @@ public class BibliotecaMain {
 		int opcionSalir = 2;
 		do {
 		
-			Scanner input = new Scanner(System.in); 
+			Scanner sc = new Scanner(System.in); 
 			
 			Biblioteca biblioteca = new Biblioteca();
 			System.out.println("Bienvenidos a la Biblioteca UCC");
@@ -23,26 +23,26 @@ public class BibliotecaMain {
 			System.out.println("4. Consultar prestamos");
 			System.out.println("Seleccione la acción a realizar:");
 			
-			int opcion = input.nextInt();
+			int opcion = sc.nextInt();
 			
 			
 			switch(opcion) {
 				case 1: 
 					
 					System.out.println("Ingrese el id:");
-					int idLibro = input.nextInt();
+					int idLibro = sc.nextInt();
 					
 					System.out.println("Ingrese el titulo:");
-					String titulo = input.next();
+					String titulo = sc.next();
 					
 					System.out.println("Ingrese isbn:");
-					String isbn = input.next();
+					String isbn = sc.next();
 					
 					System.out.println("Ingrese categoria:");
-					String categoria = input.next();
+					String categoria = sc.next();
 					
 					System.out.println("Ingrese autor:");
-					String autor = input.next();
+					String autor = sc.next();
 					
 					Libro libro = new Libro(idLibro, titulo, isbn, categoria, autor);
 					biblioteca.registrarLibro(libro);
@@ -53,16 +53,16 @@ public class BibliotecaMain {
 				case 2: 
 		
 					System.out.println("Ingrese el id:");
-					int idEstudiante = input.nextInt();
+					int idEstudiante = sc.nextInt();
 					
 					System.out.println("Ingrese el nombre:");
-					String nombre = input.next();
+					String nombre = sc.next();
 					
 					System.out.println("Ingrese el email:");
-					String email = input.next();
+					String email = sc.next();
 					
 					System.out.println("Ingrese el programa:");
-					String programa = input.next();
+					String programa = sc.next();
 					
 					
 					Estudiante estudiante = new Estudiante(idEstudiante, nombre, email, programa);
@@ -78,7 +78,7 @@ public class BibliotecaMain {
 						System.out.println(i + " :"+libros.get(i).getTitulo());
 					}
 				
-					int opcionLibro = input.nextInt();
+					int opcionLibro = sc.nextInt();
 					System.out.println("El libro a prestar es el : "+opcionLibro);
 					
 					
@@ -88,7 +88,7 @@ public class BibliotecaMain {
 						System.out.println(i + " :"+estudiantes.get(i).getNombre());
 					}
 				
-					int opcionEstudiante = input.nextInt();
+					int opcionEstudiante = sc.nextInt();
 					System.out.println("El estudiante seleccionado es : "+opcionEstudiante);
 					
 					
@@ -104,7 +104,7 @@ public class BibliotecaMain {
 			}
 			
 			System.out.println("¿Desea salir? (1=SI, 2=NO)");
-			opcionSalir = input.nextInt();
+			opcionSalir = sc.nextInt();
 		
 	
 			
